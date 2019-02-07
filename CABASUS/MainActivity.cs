@@ -13,11 +13,38 @@ namespace CABASUS
     [Activity(Theme = "@style/Theme.AppCompat.Light.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
-        public bool OnNavigationItemSelected(IMenuItem menuItem)
+        public bool OnNavigationItemSelected(IMenuItem item)
         {
-            throw new System.NotImplementedException();
+            int id = item.ItemId;
+            if (id == Resource.Id.nav_diary)
+            {
+
+            }
+            else if (id == Resource.Id.nav_activities)
+            {
+
+            }
+            else if (id == Resource.Id.nav_calendar)
+            {
+            }
+            else if (id == Resource.Id.nav_chat)
+            {
+
+            }
+            else if (id == Resource.Id.nav_settings)
+            {
+
+            }
+            else if (id == Resource.Id.nav_horses)
+            {
+
+            }
+
+            DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            drawer.CloseDrawer(GravityCompat.Start);
+            return true;
         }
-        //Conexion con git
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);

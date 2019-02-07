@@ -107,6 +107,13 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Actividades\" />
+    <Folder Include="Adaptadores\" />
+    <Folder Include="Clases\" />
+    <Folder Include="Fragments\" />
+    <Folder Include="Modelos\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.
