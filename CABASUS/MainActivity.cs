@@ -17,7 +17,7 @@ namespace CABASUS
         {
             throw new System.NotImplementedException();
         }
-
+        //Conexion con git
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
