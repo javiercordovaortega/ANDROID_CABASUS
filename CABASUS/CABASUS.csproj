@@ -66,6 +66,7 @@
     <Compile Include="Adaptadores\Caballo_Compartido_Con.cs" />
     <Compile Include="Fragments\Fragment_Caballos.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Modelos\Caballos.cs" />
     <Compile Include="Modelos\login.cs" />
     <Compile Include="Modelos\Token.cs" />
     <Compile Include="Modelos\usuarios.cs" />
@@ -139,9 +140,7 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Adaptadores\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <AndroidResource Include="Resources\layout\layout_iniciarsesion.axml">
       <SubType>Designer</SubType>
@@ -164,7 +163,6 @@
     <AndroidResource Include="Resources\layout\layout_ajustes.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <Folder Include="Clases\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\RowCaballoPropio.axml">

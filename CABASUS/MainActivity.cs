@@ -21,7 +21,6 @@ namespace CABASUS
         FragmentTransaction transaccion;
         Fragment_perfil fragment_perfil = new Fragment_perfil();
         Fragment_Ajustes fragment_ajustes = new Fragment_Ajustes();
-        public FragmentTransaction transaccion;
         Fragment_Caballos _Fragment_Caballos;
         public bool OnNavigationItemSelected(IMenuItem item)
         {
