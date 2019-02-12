@@ -7,12 +7,15 @@ using Android.Support.Design.Widget;
 using Android.Views;
 using Android.Support.V4.Widget;
 using Android.Support.V4.View;
+using CABASUS.Fragments;
 
 namespace CABASUS
 {
     [Activity(Theme = "@style/Theme.AppCompat.Light.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
+        public FragmentTransaction transaccion;
+        Fragment_Caballos _Fragment_Caballos;
         public bool OnNavigationItemSelected(IMenuItem item)
         {
             int id = item.ItemId;
@@ -37,7 +40,9 @@ namespace CABASUS
             }
             else if (id == Resource.Id.nav_horses)
             {
-
+                transaccion = FragmentManager.BeginTransaction();
+                transaccion.Show(_Fragment_Caballos);
+                transaccion.Commit();
             }
 
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
@@ -60,6 +65,13 @@ namespace CABASUS
             btnMenu.Click += delegate {
                 drawer.OpenDrawer(GravityCompat.Start);
             };
+
+            _Fragment_Caballos = new Fragment_Caballos(this);
+
+            transaccion = FragmentManager.BeginTransaction();
+            transaccion.Add(Resource.Id.FrameContent, _Fragment_Caballos, "Horses");
+            transaccion.Hide(_Fragment_Caballos);
+            transaccion.Commit();
         }
     }
 }

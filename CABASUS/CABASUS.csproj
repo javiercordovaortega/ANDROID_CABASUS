@@ -56,7 +56,12 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actividades\Perfil_Caballo.cs" />
+    <Compile Include="Adaptadores\Adaptador_Caballos.cs" />
+    <Compile Include="Adaptadores\Caballo_Compartido_Con.cs" />
+    <Compile Include="Fragments\Fragment_Caballos.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Modelos\Caballos.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -108,11 +113,27 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Actividades\" />
-    <Folder Include="Adaptadores\" />
     <Folder Include="Clases\" />
-    <Folder Include="Fragments\" />
-    <Folder Include="Modelos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\RowCaballoPropio.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\RowCaballoCompartido.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\LayoutFragmentHorses.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Perfil_Caballo.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
