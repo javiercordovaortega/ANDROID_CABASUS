@@ -22,7 +22,8 @@
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:background="#000"
-                    android:layout_marginTop="10dp" />
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/imgperfil"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -36,6 +37,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:text="Username"
+                            android:id="@+id/txtusername"
                             android:layout_weight="62"
                             android:textAlignment="textEnd"
                             android:layout_marginRight="5dp"/>
@@ -46,7 +48,8 @@
                             <ImageView
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
-                                android:background="#000" />
+                                android:background="#000"
+                                android:id="@+id/btnpuntos"/>
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
@@ -62,6 +65,7 @@
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="30dp"
                         android:gravity="center|left"
+                        android:id="@+id/txtdescripcion"
                         android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quis illum, nam eum ad asperiores magni dicta impedit cupiditate itaque?"
                         android:textSize="15dp"/>
                     <TextView
@@ -91,6 +95,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text=" cabasus@cabasus.com"
+                            android:id="@+id/txtemail"
                             android:gravity="center|left"/>
                     </LinearLayout>
                     <LinearLayout
@@ -108,6 +113,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:id="@+id/txtphone"
                             android:text=" +52 4741010206"
                             android:gravity="center|left"/>
                     </LinearLayout>
@@ -127,12 +133,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:text=" *************"
+                            android:id="@+id/txtpassword"
                             android:gravity="center|left"/>
                         <TextView
                             android:layout_width="170dp"
                             android:layout_height="match_parent"
                             android:text="change password"
-                            android:gravity="center|right"/>
+                            android:gravity="center|right"
+                            android:id="@+id/btnchangepw"/>
                     </LinearLayout>
                     <TextView
                         android:layout_width="match_parent"
@@ -142,6 +150,7 @@
                         android:textStyle="bold"
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="30dp"
+                        android:layout_marginTop="10dp"
                         android:textSize="18dp"
                         android:textColor="#000"
                         />
@@ -150,7 +159,106 @@
                         android:layout_height="90dp"
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="30dp">
-
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:background="#000"
+                                android:id="@+id/imguser1"
+                                android:layout_marginRight="18dp"
+                                android:layout_marginLeft="18dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/txtuset1"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:text="Areli"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:background="#000"
+                                android:id="@+id/imguser2"
+                                android:layout_marginRight="18dp"
+                                android:layout_marginLeft="18dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:id="@+id/txtuset2"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:text="Areli"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:background="#000"
+                                android:id="@+id/imguser3"
+                                android:layout_marginRight="18dp"
+                                android:layout_marginLeft="18dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/txtuset3"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:text="Areli"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:background="#000"
+                                android:id="@+id/imguser4"
+                                android:layout_marginRight="18dp"
+                                android:layout_marginLeft="18dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:id="@+id/txtuset4"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:text="Areli"/>
+                        </LinearLayout>
                     </LinearLayout>
                     <TextView
                         android:layout_width="match_parent"
@@ -160,7 +268,9 @@
                         android:background="#40000000"
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="30dp"
+                        android:layout_marginTop="10dp"
                         android:textSize="18dp"
+                        android:id="@+id/btnfriends"
                         />
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -191,7 +301,106 @@
                         android:layout_height="90dp"
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="30dp">
-
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:background="#000"
+                                android:id="@+id/imghorse1"
+                                android:layout_marginRight="18dp"
+                                android:layout_marginLeft="18dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/txthorse1"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:text="Areli"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:background="#000"
+                                android:id="@+id/imghorse2"
+                                android:layout_marginRight="18dp"
+                                android:layout_marginLeft="18dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:id="@+id/txthorse2"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:text="Areli"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:background="#000"
+                                android:id="@+id/imghorse3"
+                                android:layout_marginRight="18dp"
+                                android:layout_marginLeft="18dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:id="@+id/txthorse3"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:text="Areli"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:background="#000"
+                                android:id="@+id/imghorse4"
+                                android:layout_marginRight="18dp"
+                                android:layout_marginLeft="18dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:id="@+id/txthorse4"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+                                android:text="Areli"/>
+                        </LinearLayout>
                     </LinearLayout>
                     <TextView
                         android:layout_width="match_parent"
@@ -202,6 +411,8 @@
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="30dp"
                         android:textSize="18dp"
+                        android:id="@+id/btnhorses"
+                        android:layout_marginBottom="20dp"
                         />
                 </LinearLayout>
             </LinearLayout>
