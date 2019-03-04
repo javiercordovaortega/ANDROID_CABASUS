@@ -56,8 +56,13 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actividades\Friends_List.cs" />
+    <Compile Include="Actividades\Horsefollow_list.cs" />
+    <Compile Include="Actividades\Horses_Diary.cs" />
     <Compile Include="Actividades\Iniciar_Sesion.cs" />
     <Compile Include="Actividades\Registrar_Usuario.cs" />
+    <Compile Include="Adaptadores\Adaptadores_horsesfollow.cs" />
+    <Compile Include="Adaptadores\Adapter_friends.cs" />
     <Compile Include="Adaptadores\Diarios_Perfil_Caballos.cs" />
     <Compile Include="Clases\ShareInside.cs" />
     <Compile Include="Fragments\Fragment_Ajustes.cs" />
@@ -149,6 +154,11 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_friendslist.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="Resources\layout\layout_iniciarsesion.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -192,17 +202,32 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\layout_Diario_Foto.axml">
+    <AndroidResource Include="Resources\layout\layout_itemrequest.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\layout_Diario_Video.axml">
+    <AndroidResource Include="Resources\layout\layout_itemfriends.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\layout_Diario_Texto.axml">
+    <AndroidResource Include="Resources\layout\layout_title.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_horsesfollow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_itemhorsesfollow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_horsediary.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
