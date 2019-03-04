@@ -66,7 +66,7 @@ namespace CABASUS.Actividades
                     {
                         progress.Visibility = Android.Views.ViewStates.Visible;
                         Window.AddFlags(Android.Views.WindowManagerFlags.NotTouchable);
-                        string url = "http://192.168.1.74:5001/api/Account/registrar";
+                        string url = "http://192.168.0.20:5001/api/Account/registrar";
                         string formato = "application/json";
                         usuarios usuarios = new usuarios()
                         {

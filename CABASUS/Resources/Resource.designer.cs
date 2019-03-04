@@ -2462,6 +2462,12 @@ namespace CABASUS
 			// aapt resource value: 0x7f0b003f
 			public const int SYM = 2131427391;
 			
+			// aapt resource value: 0x7f0b00cc
+			public const int ScrollPerfilCaballos = 2131427532;
+			
+			// aapt resource value: 0x7f0b00da
+			public const int ViewShared = 2131427546;
+			
 			// aapt resource value: 0x7f0b00bc
 			public const int action0 = 2131427516;
 			
@@ -2726,20 +2732,26 @@ namespace CABASUS
 			// aapt resource value: 0x7f0b00b5
 			public const int imageView = 2131427509;
 			
+			// aapt resource value: 0x7f0b00d7
+			public const int imgCompartirCaballo = 2131427543;
+			
 			// aapt resource value: 0x7f0b00d5
-			public const int imgCompartirCaballo = 2131427541;
+			public const int imgFotoCaballoCompartido = 2131427541;
 			
-			// aapt resource value: 0x7f0b00d3
-			public const int imgFotoCaballoCompartido = 2131427539;
+			// aapt resource value: 0x7f0b00d8
+			public const int imgFotoCaballoPropio = 2131427544;
 			
-			// aapt resource value: 0x7f0b00d6
-			public const int imgFotoCaballoPropio = 2131427542;
+			// aapt resource value: 0x7f0b00db
+			public const int imgFotoUsuarioSharedWith = 2131427547;
 			
 			// aapt resource value: 0x7f0b0092
 			public const int imgMenu = 2131427474;
 			
 			// aapt resource value: 0x7f0b0094
 			public const int imgNotificacion = 2131427476;
+			
+			// aapt resource value: 0x7f0b00dd
+			public const int imgOpcionesSharedWith = 2131427549;
 			
 			// aapt resource value: 0x7f0b00c6
 			public const int info = 2131427526;
@@ -2774,17 +2786,20 @@ namespace CABASUS
 			// aapt resource value: 0x7f0b00b3
 			public const int lstCaballos = 2131427507;
 			
-			// aapt resource value: 0x7f0b00d2
-			public const int lstSharedwithme = 2131427538;
+			// aapt resource value: 0x7f0b00d4
+			public const int lstDiariosPerfilCaballo = 2131427540;
 			
-			// aapt resource value: 0x7f0b00da
-			public const int masked = 2131427546;
+			// aapt resource value: 0x7f0b00d3
+			public const int lstSharedwith = 2131427539;
+			
+			// aapt resource value: 0x7f0b00e0
+			public const int masked = 2131427552;
 			
 			// aapt resource value: 0x7f0b00bf
 			public const int media_actions = 2131427519;
 			
-			// aapt resource value: 0x7f0b00d8
-			public const int message = 2131427544;
+			// aapt resource value: 0x7f0b00de
+			public const int message = 2131427550;
 			
 			// aapt resource value: 0x7f0b0039
 			public const int middle = 2131427385;
@@ -2795,32 +2810,32 @@ namespace CABASUS
 			// aapt resource value: 0x7f0b0030
 			public const int multiply = 2131427376;
 			
-			// aapt resource value: 0x7f0b00de
-			public const int nav_activities = 2131427550;
+			// aapt resource value: 0x7f0b00e4
+			public const int nav_activities = 2131427556;
 			
-			// aapt resource value: 0x7f0b00df
-			public const int nav_calendar = 2131427551;
+			// aapt resource value: 0x7f0b00e5
+			public const int nav_calendar = 2131427557;
 			
-			// aapt resource value: 0x7f0b00e2
-			public const int nav_chat = 2131427554;
-			
-			// aapt resource value: 0x7f0b00dd
-			public const int nav_diary = 2131427549;
-			
-			// aapt resource value: 0x7f0b00e0
-			public const int nav_health = 2131427552;
-			
-			// aapt resource value: 0x7f0b00dc
-			public const int nav_horses = 2131427548;
+			// aapt resource value: 0x7f0b00e8
+			public const int nav_chat = 2131427560;
 			
 			// aapt resource value: 0x7f0b00e3
-			public const int nav_logout = 2131427555;
+			public const int nav_diary = 2131427555;
 			
-			// aapt resource value: 0x7f0b00db
-			public const int nav_profile = 2131427547;
+			// aapt resource value: 0x7f0b00e6
+			public const int nav_health = 2131427558;
+			
+			// aapt resource value: 0x7f0b00e2
+			public const int nav_horses = 2131427554;
+			
+			// aapt resource value: 0x7f0b00e9
+			public const int nav_logout = 2131427561;
 			
 			// aapt resource value: 0x7f0b00e1
-			public const int nav_settings = 2131427553;
+			public const int nav_profile = 2131427553;
+			
+			// aapt resource value: 0x7f0b00e7
+			public const int nav_settings = 2131427559;
 			
 			// aapt resource value: 0x7f0b00b8
 			public const int nav_view = 2131427512;
@@ -3056,35 +3071,38 @@ namespace CABASUS
 			// aapt resource value: 0x7f0b0013
 			public const int transition_transform = 2131427347;
 			
-			// aapt resource value: 0x7f0b00ce
-			public const int txtBreed = 2131427534;
-			
-			// aapt resource value: 0x7f0b00cc
-			public const int txtBrirth = 2131427532;
+			// aapt resource value: 0x7f0b00cf
+			public const int txtBreed = 2131427535;
 			
 			// aapt resource value: 0x7f0b00cd
-			public const int txtGender = 2131427533;
+			public const int txtBrirth = 2131427533;
 			
-			// aapt resource value: 0x7f0b00cf
-			public const int txtHeight = 2131427535;
+			// aapt resource value: 0x7f0b00ce
+			public const int txtGender = 2131427534;
 			
-			// aapt resource value: 0x7f0b00d7
-			public const int txtNombreCaballo = 2131427543;
+			// aapt resource value: 0x7f0b00d0
+			public const int txtHeight = 2131427536;
 			
-			// aapt resource value: 0x7f0b00d4
-			public const int txtNombreCaballoCompartido = 2131427540;
+			// aapt resource value: 0x7f0b00d9
+			public const int txtNombreCaballo = 2131427545;
+			
+			// aapt resource value: 0x7f0b00d6
+			public const int txtNombreCaballoCompartido = 2131427542;
+			
+			// aapt resource value: 0x7f0b00dc
+			public const int txtNombreUsuarioSharedWith = 2131427548;
 			
 			// aapt resource value: 0x7f0b00b4
 			public const int txtNuevoCaballo = 2131427508;
 			
-			// aapt resource value: 0x7f0b00d1
-			public const int txtOat = 2131427537;
+			// aapt resource value: 0x7f0b00d2
+			public const int txtOat = 2131427538;
 			
 			// aapt resource value: 0x7f0b0093
 			public const int txtTitulo = 2131427475;
 			
-			// aapt resource value: 0x7f0b00d0
-			public const int txtWeight = 2131427536;
+			// aapt resource value: 0x7f0b00d1
+			public const int txtWeight = 2131427537;
 			
 			// aapt resource value: 0x7f0b00b1
 			public const int txtconfirmpw = 2131427505;
@@ -3113,8 +3131,8 @@ namespace CABASUS
 			// aapt resource value: 0x7f0b0016
 			public const int view_offset_helper = 2131427350;
 			
-			// aapt resource value: 0x7f0b00d9
-			public const int visible = 2131427545;
+			// aapt resource value: 0x7f0b00df
+			public const int visible = 2131427551;
 			
 			// aapt resource value: 0x7f0b0022
 			public const int wide = 2131427362;
@@ -3311,91 +3329,103 @@ namespace CABASUS
 			public const int layout_ajustes = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int layout_iniciarsesion = 2130968618;
+			public const int layout_Diario_Foto = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int layout_perfil = 2130968619;
+			public const int layout_Diario_Texto = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int layout_registrarusuario = 2130968620;
+			public const int layout_Diario_Video = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int LayoutFragmentHorses = 2130968621;
+			public const int layout_iniciarsesion = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int nav_header_main = 2130968622;
+			public const int layout_perfil = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int Navigation = 2130968623;
+			public const int layout_registrarusuario = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_action = 2130968624;
+			public const int LayoutFragmentHorses = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_action_tombstone = 2130968625;
+			public const int nav_header_main = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_media_action = 2130968626;
+			public const int Navigation = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_media_cancel_action = 2130968627;
+			public const int notification_action = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_big_media = 2130968628;
+			public const int notification_action_tombstone = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_big_media_custom = 2130968629;
+			public const int notification_media_action = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_big_media_narrow = 2130968630;
+			public const int notification_media_cancel_action = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_template_big_media_narrow_custom = 2130968631;
+			public const int notification_template_big_media = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int notification_template_custom_big = 2130968632;
+			public const int notification_template_big_media_custom = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int notification_template_icon_group = 2130968633;
+			public const int notification_template_big_media_narrow = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int notification_template_lines_media = 2130968634;
+			public const int notification_template_big_media_narrow_custom = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int notification_template_media = 2130968635;
+			public const int notification_template_custom_big = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int notification_template_media_custom = 2130968636;
+			public const int notification_template_icon_group = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int notification_template_part_chronometer = 2130968637;
+			public const int notification_template_lines_media = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int notification_template_part_time = 2130968638;
+			public const int notification_template_media = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int Perfil_Caballo = 2130968639;
+			public const int notification_template_media_custom = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int RowCaballoCompartido = 2130968640;
+			public const int notification_template_part_chronometer = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int RowCaballoPropio = 2130968641;
+			public const int notification_template_part_time = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int select_dialog_item_material = 2130968642;
+			public const int Perfil_Caballo = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int select_dialog_multichoice_material = 2130968643;
+			public const int RowCaballoCompartido = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int select_dialog_singlechoice_material = 2130968644;
+			public const int RowCaballoPropio = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int support_simple_spinner_dropdown_item = 2130968645;
+			public const int RowSharedWith = 2130968645;
 			
 			// aapt resource value: 0x7f040046
-			public const int tooltip = 2130968646;
+			public const int select_dialog_item_material = 2130968646;
+			
+			// aapt resource value: 0x7f040047
+			public const int select_dialog_multichoice_material = 2130968647;
+			
+			// aapt resource value: 0x7f040048
+			public const int select_dialog_singlechoice_material = 2130968648;
+			
+			// aapt resource value: 0x7f040049
+			public const int support_simple_spinner_dropdown_item = 2130968649;
+			
+			// aapt resource value: 0x7f04004a
+			public const int tooltip = 2130968650;
 			
 			static Layout()
 			{

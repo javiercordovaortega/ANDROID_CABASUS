@@ -66,11 +66,6 @@ namespace CABASUS.Adaptadores
                             Selecccion.RemoveAll(x => x == item.id);
                         }
                     }
-                    else
-                    {
-                        Intent intent = new Intent(mainActivity, (typeof(Actividades.Perfil_Caballo)));
-                        mainActivity.StartActivity(intent);
-                    }
                 };
             }
             else
@@ -105,7 +100,8 @@ namespace CABASUS.Adaptadores
                     }
                     else
                     {
-
+                        Intent intent = new Intent(mainActivity, (typeof(Actividades.Perfil_Caballo)));
+                        mainActivity.StartActivity(intent);
                     }
                 };
             }

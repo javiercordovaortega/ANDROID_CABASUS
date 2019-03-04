@@ -5,7 +5,8 @@
     android:layout_height="match_parent">
 	<ScrollView
 		android:layout_width="match_parent"
-		android:layout_height="match_parent">
+		android:layout_height="match_parent"
+	     android:id="@+id/ScrollPerfilCaballos" >
 		<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -192,7 +193,7 @@
 			<TextView 
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:text="Shared with me"
+				android:text="Shared with"
 				android:layout_marginLeft="20dp"
 				android:layout_marginRight="20dp"
 				android:layout_marginTop="5dp"/>
@@ -201,7 +202,24 @@
 				android:layout_height="wrap_content"
 				android:scrollbarStyle="insideOverlay"
 				android:overScrollMode="never"
-				android:id="@+id/lstSharedwithme"
+				android:id="@+id/lstSharedwith"
+				android:choiceMode="multipleChoice"
+				android:layout_marginTop="5dp"
+				android:layout_marginLeft="20dp"
+				android:layout_marginRight="20dp"/>
+			<TextView 
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Diary"
+				android:layout_marginLeft="20dp"
+				android:layout_marginRight="20dp"
+				android:layout_marginTop="5dp"/>
+			<ListView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:scrollbarStyle="insideOverlay"
+				android:overScrollMode="never"
+				android:id="@+id/lstDiariosPerfilCaballo"
 				android:choiceMode="multipleChoice"
 				android:layout_marginTop="5dp"
 				android:layout_marginLeft="20dp"

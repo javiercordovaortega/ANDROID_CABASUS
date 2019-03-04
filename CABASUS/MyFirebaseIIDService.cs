@@ -21,7 +21,7 @@ namespace RecibirNotificcion.Firebase
             SendRegistrationToServer(refreshedToken);
             if (File.Exists(System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "DatosUsuario.xml")))
             {
-                string url = "http://192.168.1.74:5001/api/actualizarTokenFB/"+refreshedToken+"/"+ Build.Serial;
+                string url = "http://192.168.0.20:5001/api/actualizarTokenFB/"+refreshedToken+"/"+ Build.Serial;
                 HttpClient cliente = new HttpClient();
                 cliente.Timeout = TimeSpan.FromSeconds(20);
                 if (new ShareInside().HayConexion())

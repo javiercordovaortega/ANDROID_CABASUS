@@ -3,22 +3,23 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+	android:id="@+id/ViewShared">
 	<LinearLayout
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
-		android:layout_weight="70">
+		android:layout_weight="75">
 		<ImageView
 			android:layout_width="70dp"
 			android:layout_height="70dp"
-			android:id="@+id/imgFotoCaballoCompartido"
+			android:id="@+id/imgFotoUsuarioSharedWith"
 			android:background="#000"
 			android:layout_marginLeft="20dp"
 			android:layout_marginTop="5dp"
 			android:layout_marginBottom="5dp"/>
 		<TextView 
 			android:textColor="#000" 
-			android:id="@+id/txtNombreCaballoCompartido"
+			android:id="@+id/txtNombreUsuarioSharedWith"
 		    android:layout_width="wrap_content"
 		    android:layout_height="match_parent"
 			android:gravity="center|left"
@@ -28,18 +29,12 @@
 	<LinearLayout
 		android:layout_width="0dp"
 		android:layout_height="match_parent"
-		android:layout_weight="30"
+		android:layout_weight="25"
 		android:gravity="center">
 		<ImageView
 			android:layout_width="40dp"
 			android:layout_height="40dp"
-			android:id="@+id/imgCompartirCaballo"
-			android:background="#000"/>
-		<ImageView
-			android:layout_width="40dp"
-			android:layout_height="40dp"
-			android:layout_marginLeft="10dp"
-			android:id="@+id/imgCompartirCaballo"
+			android:id="@+id/imgOpcionesSharedWith"
 			android:background="#000"/>
 	</LinearLayout>
 </LinearLayout>
