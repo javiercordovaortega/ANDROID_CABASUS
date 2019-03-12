@@ -28,37 +28,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    <LinearLayout
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_marginTop="5dp">
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:text="Username"
-                            android:id="@+id/txtusername"
-                            android:layout_weight="62"
-                            android:textAlignment="textEnd"
-                            android:layout_marginRight="5dp"/>
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="38">
-                            <ImageView
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
-                                android:background="#000"
-                                android:id="@+id/btnpuntos"/>
-                        </LinearLayout>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="3dp"
-                        android:background="#000"
                         android:layout_marginTop="5dp"
-                        android:layout_marginLeft="140dp"
-                        android:layout_marginRight="140dp"/>
+                        android:text="Username"
+                        android:id="@+id/txtusername"
+                        android:layout_weight="62"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_marginRight="5dp"/>
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="1dp"
+                        android:background="#000"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"

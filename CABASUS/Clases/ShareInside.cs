@@ -132,7 +132,7 @@ namespace CABASUS.Clases
             {
                 if (HayConexion())
                 {
-                    string url = "http://192.168.0.20:5001/api/account/Login";
+                    string url = "http://192.168.1.74:5001/api/account/Login";
                     var json = new StringContent(JsonConvert.SerializeObject(log), Encoding.UTF8, "application/json");
                     HttpClient cliente = new HttpClient();
                     cliente.Timeout = TimeSpan.FromSeconds(20);

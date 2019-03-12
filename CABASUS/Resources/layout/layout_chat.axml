@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ListView
+        android:id="@+id/lst_chats"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:divider="@null"
+        android:layout_weight="90"
+        android:scrollbarStyle="insideOverlay"
+        android:overScrollMode="never"></ListView>
+    <TextView
+        android:id="@+id/btncreate"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:text="New chat"
+        android:textColor="#fff"
+        android:background="#000"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+</LinearLayout>

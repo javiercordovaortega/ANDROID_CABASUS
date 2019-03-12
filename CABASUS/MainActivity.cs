@@ -13,7 +13,7 @@ using CABASUS.Fragments;
 
 namespace CABASUS
 {
-    [Activity(Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
+    [Activity(Theme = "@style/Theme.AppCompat.Light.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         internal static readonly string CHANNEL_ID = "my_notification_channel";
@@ -21,6 +21,8 @@ namespace CABASUS
         FragmentTransaction transaccion;
         Fragment_perfil fragment_perfil = new Fragment_perfil();
         Fragment_Ajustes fragment_ajustes = new Fragment_Ajustes();
+        Fragment_Salud fragment_salud = new Fragment_Salud();
+        Fragment_Chat fragment_Chat = new Fragment_Chat();
         Fragment_Caballos _Fragment_Caballos;
         public bool OnNavigationItemSelected(IMenuItem item)
         {
@@ -41,7 +43,10 @@ namespace CABASUS
             }
             else if (id == Resource.Id.nav_chat)
             {
-
+                transaccion = FragmentManager.BeginTransaction();
+                transaccion.Add(Resource.Id.FrameContent, fragment_Chat, "Chat");
+                transaccion.Show(fragment_Chat);
+                transaccion.Commit();
             }
             else if (id == Resource.Id.nav_settings)
             {
@@ -54,6 +59,13 @@ namespace CABASUS
             {
                 transaccion = FragmentManager.BeginTransaction();
                 transaccion.Show(_Fragment_Caballos);
+                transaccion.Commit();
+            }
+            else if (id==Resource.Id.nav_health)
+            {
+                transaccion = FragmentManager.BeginTransaction();
+                transaccion.Add(Resource.Id.FrameContent, fragment_salud, "Salud");
+                transaccion.Show(fragment_salud);
                 transaccion.Commit();
             }
 
@@ -85,8 +97,8 @@ namespace CABASUS
             transaccion.Hide(_Fragment_Caballos);
             transaccion.Commit();
             var headerView = navigationView.GetHeaderView(0);
-            var nombre = headerView.FindViewById<TextView>(Resource.Id.txtusuario);
-            nombre.Text = new ShareInside().Consultar_DatosUsuario().nombre;
+            //var nombre = headerView.FindViewById<TextView>(Resource.Id.txtusuario);
+            //nombre.Text = new ShareInside().Consultar_DatosUsuario().nombre;
         }
     }
 }
