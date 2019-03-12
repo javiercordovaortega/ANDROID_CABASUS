@@ -15,7 +15,7 @@ using CABASUS.Modelos;
 
 namespace CABASUS.Actividades
 {
-    [Activity(Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
+    
     [Activity(Theme = "@style/Theme.AppCompat.Light.NoActionBar"/*, MainLauncher = true*/)]
     public class Iniciar_Sesion : Activity
     {
