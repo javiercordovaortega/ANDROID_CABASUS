@@ -56,12 +56,15 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actividades\AgregarCaballo.cs" />
     <Compile Include="Actividades\Friends_List.cs" />
     <Compile Include="Actividades\Horsefollow_list.cs" />
     <Compile Include="Actividades\Horses_Diary.cs" />
     <Compile Include="Actividades\Iniciar_Sesion.cs" />
     <Compile Include="Actividades\Registrar_Usuario.cs" />
     <Compile Include="Adaptadores\Adaptadores_horsesfollow.cs" />
+    <Compile Include="Adaptadores\AdaptadorGender.cs" />
+    <Compile Include="Adaptadores\AdaptadorRazas.cs" />
     <Compile Include="Adaptadores\Adapter_friends.cs" />
     <Compile Include="Adaptadores\Diarios_Perfil_Caballos.cs" />
     <Compile Include="Clases\ShareInside.cs" />
@@ -75,6 +78,7 @@
     <Compile Include="Modelos\Caballos.cs" />
     <Compile Include="Modelos\Diarios.cs" />
     <Compile Include="Modelos\login.cs" />
+    <Compile Include="Modelos\Razas.cs" />
     <Compile Include="Modelos\Token.cs" />
     <Compile Include="Modelos\usuarios.cs" />
     <Compile Include="Modelos\UsuariosPendientes.cs" />
@@ -85,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <GoogleServicesJson Include="google-services.json" />
+    <AndroidAsset Include="Assets\RazasGender.db" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml">
       <SubType>Designer</SubType>
@@ -120,6 +125,9 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Refractored.Controls.CircleImageView">
+      <Version>1.0.1</Version>
     </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.6.258-beta</Version>
@@ -230,6 +238,40 @@
     <AndroidResource Include="Resources\layout\layout_horsediary.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\NuevoCaballo.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Foto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\DialogoGender.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ItemGender.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\DialogoRazas.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ItemRazas.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SetiBreed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SettingsSearch.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

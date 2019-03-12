@@ -20,5 +20,10 @@
     <string name="Sign_in">Sign in</string>
     <string name="This_email_is_not_valid">This email is not valid</string>
 
-
+  <string name="Filly">Filly</string>
+  <string name="Gelding">Gelding</string>
+  <string name="Mare">Mare</string>
+  <string name="Stallion">Stallion</string>
+  <string name="Search">Search</string>
+  <string name="Breed">Breed</string>
 </resources>

@@ -132,7 +132,7 @@ namespace CABASUS.Clases
             {
                 if (HayConexion())
                 {
-                    string url = "http://192.168.0.20:5001/api/account/Login";
+                    string url = "http://192.168.1.74:5001/api/account/Login";
                     var json = new StringContent(JsonConvert.SerializeObject(log), Encoding.UTF8, "application/json");
                     HttpClient cliente = new HttpClient();
                     cliente.Timeout = TimeSpan.FromSeconds(20);
@@ -197,5 +197,33 @@ namespace CABASUS.Clases
             return token;
         }
 
+        public void CopyDocuments(string FileName, string AssetsFileName)
+        {
+            string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string dbPath = System.IO.Path.Combine(path, FileName);
+
+            try
+            {
+                if (!File.Exists(dbPath))
+                {
+                    using (var br = new BinaryReader(Application.Context.Assets.Open(AssetsFileName)))
+                    {
+                        using (var bw = new BinaryWriter(new FileStream(dbPath, FileMode.Create)))
+                        {
+                            byte[] buffer = new byte[2048];
+                            int length = 0;
+                            while ((length = br.Read(buffer, 0, buffer.Length)) > 0)
+                            {
+                                bw.Write(buffer, 0, length);
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

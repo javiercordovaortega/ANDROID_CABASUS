@@ -100,8 +100,15 @@ namespace CABASUS.Adaptadores
                     }
                     else
                     {
-                        Intent intent = new Intent(mainActivity, (typeof(Actividades.Perfil_Caballo)));
-                        mainActivity.StartActivity(intent);
+                        try
+                        {
+                            Intent intent = new Intent(view.Context, typeof(Actividades.Perfil_Caballo));
+                            view.Context.StartActivity(intent);
+                        }
+                        catch (Exception ex)
+                        {
+                            var a = "";
+                        }
                     }
                 };
             }

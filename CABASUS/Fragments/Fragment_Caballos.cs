@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using CABASUS.Modelos;
 using System.Linq;
+using Android.Content;
 
 namespace CABASUS.Fragments
 {
@@ -80,6 +81,11 @@ namespace CABASUS.Fragments
             View Vista = inflater.Inflate(Resource.Layout.LayoutFragmentHorses, container, false);
 
             ListViewCaballos = Vista.FindViewById<ListView>(Resource.Id.lstCaballos);
+
+            Vista.FindViewById<LinearLayout>(Resource.Id.bntNuevoCaballo).Click += delegate {
+                Intent intent = new Intent(mainActivity, typeof(Actividades.AgregarCaballo));
+                mainActivity.StartActivity(intent);
+            };
 
             return Vista;
         }

@@ -13,7 +13,7 @@ using CABASUS.Fragments;
 
 namespace CABASUS
 {
-    [Activity(Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
+    [Activity(Theme = "@style/Theme.AppCompat.Light.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         internal static readonly string CHANNEL_ID = "my_notification_channel";
@@ -85,8 +85,8 @@ namespace CABASUS
             transaccion.Hide(_Fragment_Caballos);
             transaccion.Commit();
             var headerView = navigationView.GetHeaderView(0);
-            var nombre = headerView.FindViewById<TextView>(Resource.Id.txtusuario);
-            nombre.Text = new ShareInside().Consultar_DatosUsuario().nombre;
+            //var nombre = headerView.FindViewById<TextView>(Resource.Id.txtusuario);
+            //nombre.Text = new ShareInside().Consultar_DatosUsuario().nombre;
         }
     }
 }
