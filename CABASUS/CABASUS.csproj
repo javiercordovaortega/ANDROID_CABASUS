@@ -35,6 +35,9 @@
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
     <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -56,24 +59,31 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actividades\Alerts_history.cs" />
     <Compile Include="Actividades\AgregarCaballo.cs" />
     <Compile Include="Actividades\Friends_List.cs" />
     <Compile Include="Actividades\Horsefollow_list.cs" />
     <Compile Include="Actividades\Horses_Diary.cs" />
     <Compile Include="Actividades\Iniciar_Sesion.cs" />
+    <Compile Include="Actividades\Nuevo_chat.cs" />
     <Compile Include="Actividades\Registrar_Usuario.cs" />
     <Compile Include="Adaptadores\Adaptadores_horsesfollow.cs" />
+    <Compile Include="Adaptadores\Adapter_AlertsHistory.cs" />
+    <Compile Include="Adaptadores\Adapter_Chat.cs" />
     <Compile Include="Adaptadores\AdaptadorGender.cs" />
     <Compile Include="Adaptadores\AdaptadorRazas.cs" />
     <Compile Include="Adaptadores\Adapter_friends.cs" />
+    <Compile Include="Adaptadores\Adapter_NuevoChat.cs" />
     <Compile Include="Adaptadores\Diarios_Perfil_Caballos.cs" />
     <Compile Include="Clases\ShareInside.cs" />
     <Compile Include="Fragments\Fragment_Ajustes.cs" />
+    <Compile Include="Fragments\Fragment_Chat.cs" />
     <Compile Include="Fragments\Fragment_perfil.cs" />
     <Compile Include="Actividades\Perfil_Caballo.cs" />
     <Compile Include="Adaptadores\Adaptador_Caballos.cs" />
     <Compile Include="Adaptadores\Caballo_Compartido_Con.cs" />
     <Compile Include="Fragments\Fragment_Caballos.cs" />
+    <Compile Include="Fragments\Fragment_Salud.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Modelos\Caballos.cs" />
     <Compile Include="Modelos\Diarios.cs" />
@@ -138,7 +148,10 @@
     <PackageReference Include="WindowsAzure.Storage">
       <Version>9.3.3</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView">
+      <Version>28.0.0.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Firebase.Messaging">
       <Version>70.1710.0-preview2</Version>
     </PackageReference>
@@ -249,6 +262,41 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\DialogoGender.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_salud.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_alerts.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_itemalerts.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_chat.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_itemchat.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_nuevochat.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_itemnuevochat.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

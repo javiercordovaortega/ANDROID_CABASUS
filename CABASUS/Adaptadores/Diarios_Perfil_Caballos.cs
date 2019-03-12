@@ -35,6 +35,7 @@ namespace CABASUS.Adaptadores
         {
             var item = listaDiarios[position];
             View view = convertView;
+           // view = perfil_Caballo.LayoutInflater.Inflate(Resource.Layout.layout_Diario_Texto, null);
             //view = perfil_Caballo.LayoutInflater.Inflate(Resource.Layout.layout_Diario_Texto, null);
             return view;
         }

@@ -15,6 +15,7 @@ using CABASUS.Modelos;
 
 namespace CABASUS.Actividades
 {
+    [Activity(Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
     [Activity(Theme = "@style/Theme.AppCompat.Light.NoActionBar"/*, MainLauncher = true*/)]
     public class Iniciar_Sesion : Activity
     {
@@ -44,32 +45,32 @@ namespace CABASUS.Actividades
             {
                 try
                 {
-                    progress.Visibility = Android.Views.ViewStates.Visible;
-                    Window.AddFlags(Android.Views.WindowManagerFlags.NotTouchable);
+                    //progress.Visibility = Android.Views.ViewStates.Visible;
+                    //Window.AddFlags(Android.Views.WindowManagerFlags.NotTouchable);
 
-                    if (!string.IsNullOrWhiteSpace(contrasena.Text) && !string.IsNullOrWhiteSpace(correo.Text))
-                    {
-                        login log = new login()
-                        {
-                            usuario = correo.Text,
-                            contrasena = contrasena.Text,
-                            id_dispositivo = Build.Serial,
-                            SO = "Android",
-                            TokenFB = await new ShareInside().GenerarTokenFirebase()
-                        };
-                        var mensaje = await new ShareInside().LogearUsuario(log);
-                        if (mensaje == "Logeado")
-                        {
+                    //if (!string.IsNullOrWhiteSpace(contrasena.Text) && !string.IsNullOrWhiteSpace(correo.Text))
+                    //{
+                    //    login log = new login()
+                    //    {
+                    //        usuario = correo.Text,
+                    //        contrasena = contrasena.Text,
+                    //        id_dispositivo = Build.Serial,
+                    //        SO = "Android",
+                    //        TokenFB = await new ShareInside().GenerarTokenFirebase()
+                    //    };
+                    //    var mensaje = await new ShareInside().LogearUsuario(log);
+                    //    if (mensaje == "Logeado")
+                    //    {
                             StartActivity(typeof(MainActivity));
                             Finish();
-                        }
-                        else
-                            Toast.MakeText(this, mensaje, ToastLength.Short).Show();
-                    }
-                    else
-                        Toast.MakeText(this, Resource.String.There_are_empty_fields, ToastLength.Short).Show();
-                    progress.Visibility = Android.Views.ViewStates.Invisible;
-                    Window.ClearFlags(Android.Views.WindowManagerFlags.NotTouchable);
+                    //    }
+                    //    else
+                    //        Toast.MakeText(this, mensaje, ToastLength.Short).Show();
+                    //}
+                    //else
+                    //    Toast.MakeText(this, Resource.String.There_are_empty_fields, ToastLength.Short).Show();
+                    //progress.Visibility = Android.Views.ViewStates.Invisible;
+                    //Window.ClearFlags(Android.Views.WindowManagerFlags.NotTouchable);
                 }
                 catch (Exception)
                 {
