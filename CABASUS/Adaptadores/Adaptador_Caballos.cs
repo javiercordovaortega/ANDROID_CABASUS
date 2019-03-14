@@ -36,82 +36,125 @@ namespace CABASUS.Adaptadores
         {
             var item = caballos[position];
             View view = convertView;
-            if (item.compartido)
+
+            view = mainActivity.LayoutInflater.Inflate(Resource.Layout.RowCaballoPropio, null);
+            view.FindViewById<TextView>(Resource.Id.txtNombreCaballo).Text = item.nombre;
+            view.LongClick += delegate
             {
-                view = mainActivity.LayoutInflater.Inflate(Resource.Layout.RowCaballoCompartido, null);
-                view.FindViewById<TextView>(Resource.Id.txtNombreCaballoCompartido).Text = item.nombre;
-                view.LongClick += delegate
+                if (Selecccion.Count == 1)
                 {
-                    if (Selecccion.Count == 1)
+                    if (Selecccion.Contains(item.id))
                     {
-                        if (Selecccion.Contains(item.id))
-                        {
-                            view.SetBackgroundColor(new Color(255, 255, 255));
-                            Selecccion.RemoveAll(x => x == item.id);
-                        }
+                        view.SetBackgroundColor(new Color(255, 255, 255));
+                        Selecccion.RemoveAll(x => x == item.id);
                     }
-                    else
-                    {
-                        view.SetBackgroundColor(new Color(209, 209, 209, 106));
-                        Selecccion.Add(item.id);
-                    }
-                };
-                view.Click += delegate
+                }
+                else
                 {
-                    if (Selecccion.Count != 0)
-                    {
-                        if (Selecccion.Contains(item.id))
-                        {
-                            view.SetBackgroundColor(new Color(255, 255, 255));
-                            Selecccion.RemoveAll(x => x == item.id);
-                        }
-                    }
-                };
-            }
-            else
+                    view.SetBackgroundColor(new Color(209, 209, 209, 106));
+                    Selecccion.Add(item.id);
+                }
+            };
+            view.Click += delegate
             {
-                view = mainActivity.LayoutInflater.Inflate(Resource.Layout.RowCaballoPropio, null);
-                view.FindViewById<TextView>(Resource.Id.txtNombreCaballo).Text = item.nombre;
-                view.LongClick += delegate
+                if (Selecccion.Count != 0)
                 {
-                    if (Selecccion.Count == 1)
+                    if (Selecccion.Contains(item.id))
                     {
-                        if (Selecccion.Contains(item.id))
-                        {
-                            view.SetBackgroundColor(new Color(255, 255, 255));
-                            Selecccion.RemoveAll(x => x == item.id);
-                        }
+                        view.SetBackgroundColor(new Color(255, 255, 255));
+                        Selecccion.RemoveAll(x => x == item.id);
                     }
-                    else
-                    {
-                        view.SetBackgroundColor(new Color(209, 209, 209, 106));
-                        Selecccion.Add(item.id);
-                    }
-                };
-                view.Click += delegate
+                }
+                else
                 {
-                    if (Selecccion.Count != 0)
+                    try
                     {
-                        if (Selecccion.Contains(item.id))
-                        {
-                            view.SetBackgroundColor(new Color(255, 255, 255));
-                            Selecccion.RemoveAll(x => x == item.id);
-                        }
+                        Intent intent = new Intent(view.Context, typeof(Actividades.Activity_Perfil_Caballos));
+                        view.Context.StartActivity(intent);
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        try
-                        {
-                            Intent intent = new Intent(view.Context, typeof(Actividades.Perfil_Caballo));
-                            view.Context.StartActivity(intent);
-                        }
-                        catch (Exception ex)
-                        {
-                            var a = "";
-                        }
+                        var a = "";
                     }
-                };
-            }
+                }
+            };
+
+            //if (item.compartido)
+            //{
+            //    view = mainActivity.LayoutInflater.Inflate(Resource.Layout.RowCaballoCompartido, null);
+            //    view.FindViewById<TextView>(Resource.Id.txtNombreCaballoCompartido).Text = item.nombre;
+            //    view.LongClick += delegate
+            //    {
+            //        if (Selecccion.Count == 1)
+            //        {
+            //            if (Selecccion.Contains(item.id))
+            //            {
+            //                view.SetBackgroundColor(new Color(255, 255, 255));
+            //                Selecccion.RemoveAll(x => x == item.id);
+            //            }
+            //        }
+            //        else
+            //        {
+            //            view.SetBackgroundColor(new Color(209, 209, 209, 106));
+            //            Selecccion.Add(item.id);
+            //        }
+            //    };
+            //    view.Click += delegate
+            //    {
+            //        if (Selecccion.Count != 0)
+            //        {
+            //            if (Selecccion.Contains(item.id))
+            //            {
+            //                view.SetBackgroundColor(new Color(255, 255, 255));
+            //                Selecccion.RemoveAll(x => x == item.id);
+            //            }
+            //        }
+            //    };
+            //}
+            //else
+            //{
+            //    view = mainActivity.LayoutInflater.Inflate(Resource.Layout.RowCaballoPropio, null);
+            //    view.FindViewById<TextView>(Resource.Id.txtNombreCaballo).Text = item.nombre;
+            //    view.LongClick += delegate
+            //    {
+            //        if (Selecccion.Count == 1)
+            //        {
+            //            if (Selecccion.Contains(item.id))
+            //            {
+            //                view.SetBackgroundColor(new Color(255, 255, 255));
+            //                Selecccion.RemoveAll(x => x == item.id);
+            //            }
+            //        }
+            //        else
+            //        {
+            //            view.SetBackgroundColor(new Color(209, 209, 209, 106));
+            //            Selecccion.Add(item.id);
+            //        }
+            //    };
+            //    view.Click += delegate
+            //    {
+            //        if (Selecccion.Count != 0)
+            //        {
+            //            if (Selecccion.Contains(item.id))
+            //            {
+            //                view.SetBackgroundColor(new Color(255, 255, 255));
+            //                Selecccion.RemoveAll(x => x == item.id);
+            //            }
+            //        }
+            //        else
+            //        {
+            //            try
+            //            {
+            //                Intent intent = new Intent(mainActivity.ApplicationContext, typeof(Actividades.Perfil_Caballo));
+            //                mainActivity.ApplicationContext.StartActivity(intent);
+            //            }
+            //            catch (Exception ex)
+            //            {
+            //                var a = "";
+            //            }
+            //        }
+            //    };
+            //}
 
             if (Selecccion.Contains(item.id))
             {

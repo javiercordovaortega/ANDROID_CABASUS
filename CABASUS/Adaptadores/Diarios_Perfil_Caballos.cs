@@ -16,10 +16,10 @@ namespace CABASUS.Adaptadores
 {
     public class Diarios_Perfil_Caballos : BaseAdapter<Diarios>
     {
-        private Perfil_Caballo perfil_Caballo;
+        private Activity_Perfil_Caballos perfil_Caballo;
         private List<Diarios> listaDiarios;
 
-        public Diarios_Perfil_Caballos(Perfil_Caballo perfil_Caballo, List<Diarios> listaDiarios)
+        public Diarios_Perfil_Caballos(Activity_Perfil_Caballos perfil_Caballo, List<Diarios> listaDiarios)
         {
             this.perfil_Caballo = perfil_Caballo;
             this.listaDiarios = listaDiarios;
@@ -35,8 +35,7 @@ namespace CABASUS.Adaptadores
         {
             var item = listaDiarios[position];
             View view = convertView;
-           // view = perfil_Caballo.LayoutInflater.Inflate(Resource.Layout.layout_Diario_Texto, null);
-            //view = perfil_Caballo.LayoutInflater.Inflate(Resource.Layout.layout_Diario_Texto, null);
+            view = perfil_Caballo.LayoutInflater.Inflate(Resource.Layout.layout_horsediary, null);
             return view;
         }
     }

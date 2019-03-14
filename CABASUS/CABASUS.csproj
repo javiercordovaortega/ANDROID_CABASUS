@@ -59,6 +59,7 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actividades\Activity_Perfil_Caballos.cs" />
     <Compile Include="Actividades\Alerts_history.cs" />
     <Compile Include="Actividades\AgregarCaballo.cs" />
     <Compile Include="Actividades\Friends_List.cs" />
@@ -79,7 +80,6 @@
     <Compile Include="Fragments\Fragment_Ajustes.cs" />
     <Compile Include="Fragments\Fragment_Chat.cs" />
     <Compile Include="Fragments\Fragment_perfil.cs" />
-    <Compile Include="Actividades\Perfil_Caballo.cs" />
     <Compile Include="Adaptadores\Adaptador_Caballos.cs" />
     <Compile Include="Adaptadores\Caballo_Compartido_Con.cs" />
     <Compile Include="Fragments\Fragment_Caballos.cs" />
@@ -218,11 +218,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Perfil_Caballo.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\layout_itemrequest.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -320,6 +315,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\SettingsSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_Perfil_Caballos.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

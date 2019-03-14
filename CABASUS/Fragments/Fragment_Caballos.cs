@@ -31,47 +31,11 @@ namespace CABASUS.Fragments
             });
             caballos.Add(new Caballos()
             {
-                id = "2",
-                nombre = "Caballo compartido",
-                compartido = true
-            });
-            caballos.Add(new Caballos()
-            {
                 id = "3",
                 nombre = "Caballo propio",
                 compartido = false
             });
-            caballos.Add(new Caballos()
-            {
-                id = "4",
-                nombre = "Caballo propio",
-                compartido = false
-            });
-            caballos.Add(new Caballos()
-            {
-                id = "5",
-                nombre = "Caballo compartido",
-                compartido = true
-            });
-            caballos.Add(new Caballos()
-            {
-                id = "6",
-                nombre = "Caballo propio",
-                compartido = false
-            });
-            caballos.Add(new Caballos()
-            {
-                id = "7",
-                nombre = "Caballo propio",
-                compartido = false
-            });
-            caballos.Add(new Caballos()
-            {
-                id = "8",
-                nombre = "Caballo compartido",
-                compartido = true
-            });
-
+            
             caballos = caballos.OrderBy(x => x.compartido.Equals(true)).ThenBy(x => x.compartido.Equals(false)).ToList();
             ListViewCaballos.Adapter = new Adaptadores.Adaptador_Caballos(caballos, mainActivity);
         }

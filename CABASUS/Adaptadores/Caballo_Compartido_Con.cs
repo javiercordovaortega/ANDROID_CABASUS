@@ -17,10 +17,10 @@ namespace CABASUS.Adaptadores
 {
     public class Caballo_Compartido_Con : BaseAdapter<UsuariosPendientes>
     {
-        private Perfil_Caballo perfil_Caballo;
+        private Activity_Perfil_Caballos perfil_Caballo;
         List<UsuariosPendientes> listaUsuarios;
 
-        public Caballo_Compartido_Con(Perfil_Caballo perfil_Caballo, List<UsuariosPendientes> listaUsuarios)
+        public Caballo_Compartido_Con(Activity_Perfil_Caballos perfil_Caballo, List<UsuariosPendientes> listaUsuarios)
         {
             this.perfil_Caballo = perfil_Caballo;
             this.listaUsuarios = listaUsuarios;

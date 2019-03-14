@@ -1,7 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="wrap_content">
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="30">
+		<ImageView 
+			android:layout_width="60dp"
+			android:layout_height="60dp"
+			android:background="#000"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="10dp"/>
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="90">
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="20">
+			<TextView 
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="80"
+				android:text="Horese name"
+				android:layout_marginTop="10dp"
+				android:textAlignment="center"/>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="20">
+				<ImageView 
+					android:layout_width="30dp"
+					android:layout_height="30dp"
+					android:background="#000"
+					android:layout_margin="5dp"/>
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="60">
+			<TextView 
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="descripction diary"
+				android:layout_marginTop="10dp"
+				android:layout_margin="5dp"/>
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="20">
+			<TextView 
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="50"
+				android:text="Likes"/>
+			<TextView 
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="50"
+				android:text="1250 k"/>
+		</LinearLayout>
+	</LinearLayout>
 </LinearLayout>
