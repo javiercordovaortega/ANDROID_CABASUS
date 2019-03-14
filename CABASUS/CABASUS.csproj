@@ -62,6 +62,7 @@
     <Compile Include="Actividades\Activity_Perfil_Caballos.cs" />
     <Compile Include="Actividades\Alerts_history.cs" />
     <Compile Include="Actividades\AgregarCaballo.cs" />
+    <Compile Include="Actividades\Editar_Perfil.cs" />
     <Compile Include="Actividades\Friends_List.cs" />
     <Compile Include="Actividades\Horsefollow_list.cs" />
     <Compile Include="Actividades\Horses_Diary.cs" />
@@ -315,6 +316,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\SettingsSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_editarperfil.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\layout_Perfil_Caballos.axml">

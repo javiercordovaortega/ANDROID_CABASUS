@@ -3,65 +3,39 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="#000">
-        <TextView
-            android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="#000"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dp"
             android:layout_height="70dp"
+            android:layout_weight="1.5"
+            android:background="#fff"
+            android:id="@+id/btnvolver"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="7"
             android:text="Friends list"
             android:textColor="#fff"
             android:gravity="center"
             android:textStyle="italic|bold"
             android:textSize="20dp"/>
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="0dp"
             android:layout_height="70dp"
+            android:layout_weight="1.5"
             android:background="#fff"
-            android:id="@+id/btnvolver"/>
-    </RelativeLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="8"
-            android:background="#40000000">
-            <EditText
+            android:id="@+id/btnbuscar"/>
+    </LinearLayout>
+         <ListView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/txtsearch"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginBottom="1dp"
-                android:hint="Search"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="82"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="90"
                 android:scrollbarStyle="insideOverlay"
                 android:overScrollMode="never"
                 android:id="@+id/list_frieds"/>
-        </LinearLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:background="#000"
-            android:id="@+id/btnaddfriends"
-            android:layout_weight="10"
-            android:text="Add friend"
-            android:textColor="#fff"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="24dp"/>
-    </LinearLayout>
 </LinearLayout>

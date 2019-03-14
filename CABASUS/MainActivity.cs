@@ -9,11 +9,10 @@ using Android.Support.V4.Widget;
 using Android.Support.V4.View;
 using CABASUS.Clases;
 using CABASUS.Fragments;
-using CABASUS.Fragments;
-
+using CABASUS.Actividades;
 namespace CABASUS
 {
-    [Activity(Theme = "@style/Theme.AppCompat.Light.NoActionBar", MainLauncher = true)]
+    [Activity(Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
     public class MainActivity : AppCompatActivity, NavigationView.IOnNavigationItemSelectedListener
     {
         internal static readonly string CHANNEL_ID = "my_notification_channel";
@@ -30,7 +29,10 @@ namespace CABASUS
             if (id == Resource.Id.nav_profile)
             {
                 transaccion = FragmentManager.BeginTransaction();
-                transaccion.Add(Resource.Id.FrameContent, fragment_perfil, "Perfil");
+                transaccion.Hide(_Fragment_Caballos);
+                transaccion.Hide(fragment_Chat);
+                transaccion.Hide(fragment_ajustes);
+                transaccion.Hide(fragment_salud);
                 transaccion.Show(fragment_perfil);
                 transaccion.Commit();
             }
@@ -44,28 +46,41 @@ namespace CABASUS
             else if (id == Resource.Id.nav_chat)
             {
                 transaccion = FragmentManager.BeginTransaction();
-                transaccion.Add(Resource.Id.FrameContent, fragment_Chat, "Chat");
+                transaccion.Hide(_Fragment_Caballos);
                 transaccion.Show(fragment_Chat);
+                transaccion.Hide(fragment_ajustes);
+                transaccion.Hide(fragment_salud);
+                transaccion.Hide(fragment_perfil);
                 transaccion.Commit();
             }
             else if (id == Resource.Id.nav_settings)
             {
                 transaccion = FragmentManager.BeginTransaction();
-                transaccion.Add(Resource.Id.FrameContent, fragment_ajustes, "Ajustes");
+                transaccion.Hide(_Fragment_Caballos);
+                transaccion.Hide(fragment_Chat);
                 transaccion.Show(fragment_ajustes);
+                transaccion.Hide(fragment_salud);
+                transaccion.Hide(fragment_perfil);
                 transaccion.Commit();
             }
             else if (id == Resource.Id.nav_horses)
             {
                 transaccion = FragmentManager.BeginTransaction();
                 transaccion.Show(_Fragment_Caballos);
+                transaccion.Hide(fragment_Chat);
+                transaccion.Hide(fragment_ajustes);
+                transaccion.Hide(fragment_salud);
+                transaccion.Hide(fragment_perfil);
                 transaccion.Commit();
             }
             else if (id==Resource.Id.nav_health)
             {
                 transaccion = FragmentManager.BeginTransaction();
-                transaccion.Add(Resource.Id.FrameContent, fragment_salud, "Salud");
+                transaccion.Hide(_Fragment_Caballos);
+                transaccion.Hide(fragment_Chat);
+                transaccion.Hide(fragment_ajustes);
                 transaccion.Show(fragment_salud);
+                transaccion.Hide(fragment_perfil);
                 transaccion.Commit();
             }
 
@@ -78,6 +93,7 @@ namespace CABASUS
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Navigation);
+            var boton_superiorderecho = FindViewById<ImageView>(Resource.Id.imgNotificacion);
             DrawerLayout drawer = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close);
             drawer.AddDrawerListener(toggle);
@@ -91,14 +107,29 @@ namespace CABASUS
             };
 
             _Fragment_Caballos = new Fragment_Caballos(this);
-
             transaccion = FragmentManager.BeginTransaction();
+            transaccion.Add(Resource.Id.FrameContent, fragment_perfil, "Perfil");
             transaccion.Add(Resource.Id.FrameContent, _Fragment_Caballos, "Horses");
+            transaccion.Add(Resource.Id.FrameContent, fragment_Chat, "Chat");
+            transaccion.Add(Resource.Id.FrameContent, fragment_ajustes, "Ajustes");
+            transaccion.Add(Resource.Id.FrameContent, fragment_salud, "Salud");
             transaccion.Hide(_Fragment_Caballos);
+            transaccion.Hide(fragment_Chat);
+            transaccion.Hide(fragment_ajustes);
+            transaccion.Hide(fragment_salud);
+            transaccion.Show(fragment_perfil);
             transaccion.Commit();
+            
             var headerView = navigationView.GetHeaderView(0);
+
+
             //var nombre = headerView.FindViewById<TextView>(Resource.Id.txtusuario);
             //nombre.Text = new ShareInside().Consultar_DatosUsuario().nombre;
+
+            boton_superiorderecho.Click += delegate
+            {
+                StartActivity(typeof(Editar_Perfil));
+            };
         }
     }
 }

@@ -46,70 +46,71 @@ namespace CABASUS.Actividades
             };
             signin.Click += async delegate
             {
-                var contenido = "";
-                try
-                {
-                    if (string.IsNullOrWhiteSpace(username.Text) || string.IsNullOrWhiteSpace(email.Text) || string.IsNullOrWhiteSpace(password.Text) || string.IsNullOrWhiteSpace(confirmpassword.Text))
-                    {
+                //var contenido = "";
+                //try
+                //{
+                //    if (string.IsNullOrWhiteSpace(username.Text) || string.IsNullOrWhiteSpace(email.Text) || string.IsNullOrWhiteSpace(password.Text) || string.IsNullOrWhiteSpace(confirmpassword.Text))
+                //    {
 
-                        Toast.MakeText(this, "Empty field", ToastLength.Short).Show();
-                    }
-                    else if (!validar_email(email))
-                    {
-                        Toast.MakeText(this, Resource.String.This_email_is_not_valid, ToastLength.Short).Show();
-                    }
-                    else if (password.Text != confirmpassword.Text)
-                    {
-                        Toast.MakeText(this, "Password doesn't match", ToastLength.Short).Show();
-                    }
-                    else
-                    {
-                        progress.Visibility = Android.Views.ViewStates.Visible;
-                        Window.AddFlags(Android.Views.WindowManagerFlags.NotTouchable);
-                        string url = "http://192.168.1.74:5001/api/Account/registrar";
-                        string formato = "application/json";
-                        usuarios usuarios = new usuarios()
-                        {
-                            nombre = username.Text,
-                            email = email.Text,
-                            contrasena = password.Text,
-                            id_dispositivo = Build.Serial,
-                            SO = "Android",
-                            tokenFB = await new ShareInside().GenerarTokenFirebase(),
-                            fecha_nacimiento = ""
-                        };
-                        var json = new StringContent(JsonConvert.SerializeObject(usuarios), Encoding.UTF8, formato);
-                        HttpClient cliente = new HttpClient();
-                        cliente.Timeout = TimeSpan.FromSeconds(20);
-                        if (new ShareInside().HayConexion())
-                        {
-                            var respuesta = await cliente.PostAsync(url, json);
-                            contenido = await respuesta.Content.ReadAsStringAsync();
-                            respuesta.EnsureSuccessStatusCode();
-                            if (respuesta.IsSuccessStatusCode)
-                            {
-                                var cont = JsonConvert.DeserializeObject<Token>(contenido);
-                                usuarios.foto = "";
-                                usuarios.id_usuario = Obtener_idusuario(cont.token);
-                                new ShareInside().GuardarToken(cont);
-                                new ShareInside().Guardar_DatosUsuario(usuarios);
-                                new ShareInside().Guardar_Email_Contrasena(email.Text, password.Text);
-                                progress.Visibility = Android.Views.ViewStates.Invisible;
-                                Window.ClearFlags(Android.Views.WindowManagerFlags.NotTouchable);
-                                StartActivity(typeof(MainActivity));
-                            }
-                            else
-                            {
-                                Toast.MakeText(this, contenido, ToastLength.Short).Show();
-                                progress.Visibility = Android.Views.ViewStates.Invisible;
-                                Window.ClearFlags(Android.Views.WindowManagerFlags.NotTouchable);
-                            }
-                        }
-                        else
-                            Toast.MakeText(this, Resource.String.No_internet_connection, ToastLength.Short).Show();
-                    }
-                }
-                catch (Exception) { }
+                //        Toast.MakeText(this, "Empty field", ToastLength.Short).Show();
+                //    }
+                //    else if (!validar_email(email))
+                //    {
+                //        Toast.MakeText(this, Resource.String.This_email_is_not_valid, ToastLength.Short).Show();
+                //    }
+                //    else if (password.Text != confirmpassword.Text)
+                //    {
+                //        Toast.MakeText(this, "Password doesn't match", ToastLength.Short).Show();
+                //    }
+                //    else
+                //    {
+                //        progress.Visibility = Android.Views.ViewStates.Visible;
+                //        Window.AddFlags(Android.Views.WindowManagerFlags.NotTouchable);
+                //        string url = "http://192.168.1.74:5001/api/Account/registrar";
+                //        string formato = "application/json";
+                //        usuarios usuarios = new usuarios()
+                //        {
+                //            nombre = username.Text,
+                //            email = email.Text,
+                //            contrasena = password.Text,
+                //            id_dispositivo = Build.Serial,
+                //            SO = "Android",
+                //            tokenFB = await new ShareInside().GenerarTokenFirebase(),
+                //            fecha_nacimiento = ""
+                //        };
+                //        var json = new StringContent(JsonConvert.SerializeObject(usuarios), Encoding.UTF8, formato);
+                //        HttpClient cliente = new HttpClient();
+                //        cliente.Timeout = TimeSpan.FromSeconds(20);
+                //        if (new ShareInside().HayConexion())
+                //        {
+                //            var respuesta = await cliente.PostAsync(url, json);
+                //            contenido = await respuesta.Content.ReadAsStringAsync();
+                //            respuesta.EnsureSuccessStatusCode();
+                //            if (respuesta.IsSuccessStatusCode)
+                //            {
+                //                var cont = JsonConvert.DeserializeObject<Token>(contenido);
+                //                usuarios.foto = "";
+                //                usuarios.id_usuario = Obtener_idusuario(cont.token);
+                //                new ShareInside().GuardarToken(cont);
+                //                new ShareInside().Guardar_DatosUsuario(usuarios);
+                //                new ShareInside().Guardar_Email_Contrasena(email.Text, password.Text);
+                //                progress.Visibility = Android.Views.ViewStates.Invisible;
+                //                Window.ClearFlags(Android.Views.WindowManagerFlags.NotTouchable);
+                //                StartActivity(typeof(MainActivity));
+                //            }
+                //            else
+                //            {
+                //                Toast.MakeText(this, contenido, ToastLength.Short).Show();
+                //                progress.Visibility = Android.Views.ViewStates.Invisible;
+                //                Window.ClearFlags(Android.Views.WindowManagerFlags.NotTouchable);
+                //            }
+                //        }
+                //        else
+                //            Toast.MakeText(this, Resource.String.No_internet_connection, ToastLength.Short).Show();
+                //    }
+                //}
+                //catch (Exception) { }
+                StartActivity(typeof(MainActivity));
             };
             
         }
