@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Actividades\Alerts_history.cs" />
     <Compile Include="Actividades\AgregarCaballo.cs" />
+    <Compile Include="Actividades\Editar_Perfil.cs" />
     <Compile Include="Actividades\Friends_List.cs" />
     <Compile Include="Actividades\Horsefollow_list.cs" />
     <Compile Include="Actividades\Horses_Diary.cs" />
@@ -320,6 +321,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\SettingsSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\layout_editarperfil.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

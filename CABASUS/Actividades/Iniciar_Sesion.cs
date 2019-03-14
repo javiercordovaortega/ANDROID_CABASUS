@@ -16,7 +16,7 @@ using CABASUS.Modelos;
 namespace CABASUS.Actividades
 {
     
-    [Activity(Theme = "@style/Theme.AppCompat.Light.NoActionBar"/*, MainLauncher = true*/)]
+    [Activity(Theme = "@style/Theme.AppCompat.Light.NoActionBar", MainLauncher = true)]
     public class Iniciar_Sesion : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
